@@ -1,0 +1,200 @@
+.container {
+  max-width: 900px;
+  width: 100%;
+  border-radius: 6px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 50px;
+  background-color: #4070f4;
+}
+
+/* main nav */
+.main__nav {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
+.company__logo img {
+  width: 150px;
+}
+
+.company__name {
+  padding-left: 6rem;
+}
+.company__name h1 {
+  color: black;
+  font-size: 4rem;
+}
+
+.office {
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
+}
+.office__container {
+  border: 2px solid black;
+  text-align: center;
+  padding: 12px;
+  color: #333;
+  font-weight: 250;
+}
+.office__container h5 {
+  color: black;
+}
+.addformname {
+  padding-left: 7rem;
+}
+.addformname h1 {
+  color: black;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.address {
+  padding-right: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-left: 30%;
+  color: rgb(51, 46, 46);
+}
+
+.form {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  display: grid;
+  grid-template: auto repeat(6, 65px) auto repeat(2, 65px) / repeat(3, 1fr);
+  gap: 10px 15px;
+
+  & > .title {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-transform: capitalize;
+    color: #333;
+    font-weight: 500;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+
+  &:has(textarea) {
+    grid-row-end: span 2;
+  }
+
+  & > label {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 5px;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  & > input {
+    flex-grow: 1;
+    border-radius: 6px;
+    padding: 0 5px;
+    border: 1px solid #cccccc;
+    background: #fff;
+  }
+
+  & > textarea {
+    padding: 10px;
+    resize: none;
+    flex-grow: 1;
+    border-radius: 6px;
+    border: 1px solid #cccccc;
+    background: #fff;
+  }
+}
+
+.acknowleged {
+  margin-top: 20px;
+
+  & .ac_container h3 {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+  }
+}
+.passport__container {
+  display: flex;
+  gap: 13px;
+}
+.passport__container input[type="file"] {
+  width: 70%;
+  height: 140px;
+}
+.attach p {
+  color: black;
+}
+
+.list {
+  margin-left: 1rem;
+}
+.attach ol li {
+  list-style-type: decimal;
+  color: black;
+}
+.attach hr {
+  width: 100%;
+  border-top: 1px solid black;
+  margin-top: 2px;
+  padding-top: 4px;
+}
+.main_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #000;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+}
+.img_box{
+  position: relative;
+  width: 120px;
+  height: 100px;
+ 
+}
+.img_box img{
+  width: 100%;
+}
+.hiden_file_box{
+  position: absolute;
+  opacity: 0;
+}
+@media screen and( max-width:400px) {
+  .form {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto repeat(6, 65px) auto repeat(2, 65px) / repeat(
+        2,
+        1fr
+      );
+    gap: 10px 15px;
+  }
+}
